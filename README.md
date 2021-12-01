@@ -32,3 +32,37 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+# This is where I record section that I have finished
+
+### Lecture 87
+
+### Lecture 88
+
+getStaticProps() is a function that returns an object with the props key and then executes the component function.
+It runs on the client side
+
+### lecture 89
+
+Working with fs fails when working on the client side
+nextjs prerenders the data right from the start
+
+### lecture 91
+
+getStatic is suitable when the data does not change to often because we would have to rebuild and redeploy all
+the times
+
+To solve that we can can use Incrementatal static generation.This is how it works:
+first: Pre generate the page
+second:Regenerate it on every request, at most every x second.
+third: we solve that using revalidate
+
+### lecture 93
+
+Keep in mind that the getStaticProps only works in pages not in anyy other components
+
+# lecture 94
+
+If we want to get the id of something in getStaticProps, we would have to use [context and params]
+The reason why we use params instead of router is because params is used for getStatic props
+which runs onin the server(help prerender pages)
